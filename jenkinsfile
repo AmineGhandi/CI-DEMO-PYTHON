@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'python -m unittest discover -s tests'
-                echo 'Testing..'
+                bat 'python -m pytest'
+                echo 'Running tests..'
             }
         }
         stage('Deploy') {
